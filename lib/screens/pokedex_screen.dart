@@ -119,7 +119,13 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                         width: 120,
                                         child: Text(estadistica.nombre),
                                       ),
-                                      const Spacer(),
+                                      Expanded(
+                                        child: LinearProgressIndicator(
+                                          value: estadistica.valor / 255,
+                                          minHeight: 8,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 8),
                                       Text('${estadistica.valor}'),
                                     ],
                                   ),
