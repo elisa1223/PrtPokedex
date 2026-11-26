@@ -103,6 +103,30 @@ class _PokedexScreenState extends State<PokedexScreen> {
                               const SizedBox(height: 16),
                               const Divider(),
                               const Text(
+                                'Habilidades',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Wrap(
+                                spacing: 8,
+                                children: pokemon.habilidades
+                                    .map(
+                                      (habilidad) => Chip(
+                                        avatar: const Icon(
+                                          Icons.auto_awesome,
+                                          size: 16,
+                                        ),
+                                        label: Text(habilidad),
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
+                              const SizedBox(height: 16),
+                              const Divider(),
+                              const Text(
                                 'Estadísticas',
                                 style: TextStyle(
                                   fontSize: 18,
@@ -112,12 +136,16 @@ class _PokedexScreenState extends State<PokedexScreen> {
                               const SizedBox(height: 8),
                               ...pokemon.estadisticas.map(
                                 (estadistica) => Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 4),
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 4,
+                                  ),
                                   child: Row(
                                     children: [
                                       SizedBox(
                                         width: 120,
-                                child: Text(estadistica.nombreEnEspanol),
+                                        child: Text(
+                                          estadistica.nombreEnEspanol,
+                                        ),
                                       ),
                                       Expanded(
                                         child: LinearProgressIndicator(
