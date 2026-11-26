@@ -68,4 +68,9 @@ void main() {
     expect(pokemon.altura, 0.4);
     expect(pokemon.peso, 6.0);
   });
+
+  test('Pokemon.fromJson lee las habilidades', () {
+    final pokemon = Pokemon.fromJson(json);
+    expect(pokemon.habilidades, ['static', 'lightning-rod']);
+  });
 }
