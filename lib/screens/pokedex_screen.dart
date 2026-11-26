@@ -56,9 +56,12 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   : FutureBuilder<Pokemon>(
                       future: _futuroPokemon,
                       builder: (context, snapshot) {
-                                                // INICIO TODO 3
-                        if (snapshot.connectionState == ConnectionState.waiting) {
-                          return const Center(child: CircularProgressIndicator());
+                        // INICIO TODO 3
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
                         }
 
                         if (snapshot.hasError) {
@@ -91,13 +94,13 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                     .map((tipo) => Chip(label: Text(tipo)))
                                     .toList(),
                               ),
-                                                            const SizedBox(height: 12),
+                              const SizedBox(height: 12),
                               Text(
                                 'Altura: ${pokemon.altura.toStringAsFixed(1)} m   '
                                 'Peso: ${pokemon.peso.toStringAsFixed(1)} kg',
                                 style: const TextStyle(fontSize: 18),
                               ),
-                                                            const SizedBox(height: 16),
+                              const SizedBox(height: 16),
                               const Divider(),
                               const Text(
                                 'Estadísticas',
@@ -107,6 +110,21 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                 ),
                               ),
                               const SizedBox(height: 8),
+                              ...pokemon.estadisticas.map(
+                                (estadistica) => Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 4),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 120,
+                                        child: Text(estadistica.nombre),
+                                      ),
+                                      const Spacer(),
+                                      Text('${estadistica.valor}'),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         );
