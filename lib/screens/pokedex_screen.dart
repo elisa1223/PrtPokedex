@@ -117,7 +117,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                     children: [
                                       SizedBox(
                                         width: 120,
-                                        child: Text(estadistica.nombre),
+                                child: Text(estadistica.nombreEnEspanol),
                                       ),
                                       Expanded(
                                         child: LinearProgressIndicator(
