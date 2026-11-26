@@ -110,6 +110,15 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                 ),
                               ),
                               const SizedBox(height: 8),
+                              Wrap(
+                                spacing: 8,
+                                children: pokemon.habilidades
+                                    .map(
+                                      (habilidad) =>
+                                          Chip(label: Text(habilidad)),
+                                    )
+                                    .toList(),
+                              ),
                               const SizedBox(height: 16),
                               const Divider(),
                               const Text(
@@ -148,7 +157,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                             ],
                           ),
                         );
-                        // FIN TODO 3
+                        //
                       },
                     ),
             ),
