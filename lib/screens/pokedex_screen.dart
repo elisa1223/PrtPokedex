@@ -114,8 +114,13 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                 spacing: 8,
                                 children: pokemon.habilidades
                                     .map(
-                                      (habilidad) =>
-                                          Chip(label: Text(habilidad)),
+                                      (habilidad) => Chip(
+                                        avatar: const Icon(
+                                          Icons.auto_awesome,
+                                          size: 16,
+                                        ),
+                                        label: Text(habilidad),
+                                      ),
                                     )
                                     .toList(),
                               ),
@@ -157,7 +162,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                             ],
                           ),
                         );
-                        //
+                        // FIN TODO 3
                       },
                     ),
             ),
