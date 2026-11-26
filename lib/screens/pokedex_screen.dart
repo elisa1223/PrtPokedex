@@ -119,7 +119,9 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                           Icons.auto_awesome,
                                           size: 16,
                                         ),
-                                        label: Text(habilidad),
+                                        label: Text(
+                                          habilidad.replaceAll('-', ' '),
+                                        ),
                                       ),
                                     )
                                     .toList(),
