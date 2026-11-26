@@ -1,17 +1,23 @@
-# pokedex_minima
+# PrtPokedex
 
-A new Flutter project.
+Práctica 2 de Desarrollo de Aplicaciones Móviles (Instituto Tecnológico de Tlaxiaco, grupo 7US).
 
-## Getting Started
+App en Flutter que consulta [PokeAPI](https://pokeapi.co/) y muestra la imagen, el número, el nombre, los tipos, la altura, el peso, las habilidades y las estadísticas de un Pokémon.
 
-This project is a starting point for a Flutter application.
+## Integrantes
 
-A few resources to get you started if this is your first Flutter project:
+- Yaretzy Montesinos López (23620260)
+- Elisa Sánchez Coronel (23620091)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Cómo ejecutarla
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub get
+flutter run -d chrome --no-web-resources-cdn
+```
+
+## Pruebas
+
+```
+flutter test
+```
