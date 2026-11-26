@@ -23,6 +23,16 @@ void main() {
         },
       },
     ],
+    'abilities': [
+      {
+        'ability': {'name': 'static'},
+        'is_hidden': false,
+      },
+      {
+        'ability': {'name': 'lightning-rod'},
+        'is_hidden': true,
+      },
+    ],
     'stats': [
       {
         'base_stat': 35,
