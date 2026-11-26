@@ -21,6 +21,10 @@ void main() {
         'type': {'name': 'electric', 'url': 'https://pokeapi.co/api/v2/type/13/'},
       },
     ],
+    'stats': [
+      {'base_stat': 35, 'stat': {'name': 'hp'}},
+      {'base_stat': 90, 'stat': {'name': 'speed'}},
+    ],
   };
 
   test('Pokemon.fromJson lee id, nombre, imagen y tipos', () {
