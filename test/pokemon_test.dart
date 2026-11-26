@@ -37,4 +37,10 @@ void main() {
     );
     expect(pokemon.tipos, ['electric']);
   });
+    test('Pokemon.fromJson lee las estadisticas', () {
+    final pokemon = Pokemon.fromJson(json);
+    expect(pokemon.estadisticas.length, 2);
+    expect(pokemon.estadisticas.first.nombre, 'hp');
+    expect(pokemon.estadisticas.first.valor, 35);
+  });
 }
