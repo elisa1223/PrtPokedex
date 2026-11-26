@@ -97,6 +97,16 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                 'Peso: ${pokemon.peso.toStringAsFixed(1)} kg',
                                 style: const TextStyle(fontSize: 18),
                               ),
+                                                            const SizedBox(height: 16),
+                              const Divider(),
+                              const Text(
+                                'Estadísticas',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
                             ],
                           ),
                         );
