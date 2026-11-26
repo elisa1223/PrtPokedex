@@ -1,3 +1,5 @@
+import 'estadistica.dart';
+
 class Pokemon {
   final int id;
   final String nombre;
@@ -5,6 +7,7 @@ class Pokemon {
   final List<String> tipos;
   final double altura; // metros
   final double peso; // kilogramos
+  final List<Estadistica> estadisticas;
 
   Pokemon({
     required this.id,
@@ -13,6 +16,7 @@ class Pokemon {
     required this.tipos,
     required this.altura,
     required this.peso,
+    required this.estadisticas,
   });
 
   factory Pokemon.fromJson(Map<String, dynamic> json) {
@@ -26,6 +30,9 @@ class Pokemon {
       // height viene en decímetros y weight en hectogramos: entre 10
       altura: (json['height'] as int) / 10,
       peso: (json['weight'] as int) / 10,
+      estadisticas: [
+        for (final e in json['stats']) Estadistica.fromJson(e),
+      ],
     );
   }
 }
